@@ -17,13 +17,14 @@ class App extends React.Component {
 				this.setState({
 					isLoaded: true,
 					attractions: json,
+					strikeThrough: false,
 				});
 			});
 	}
 
 	addActivity = (e, index) => {
 		this.state.attractionsListTwo.push(e);
-		this.state.attractions.splice(index, index + 1);
+		this.state.attractions.splice(index, 1);
 		this.forceUpdate();
 	};
 	reset = (e) => {
@@ -34,8 +35,13 @@ class App extends React.Component {
 				this.setState({
 					isLoaded: true,
 					attractions: json,
+					strikeThrough: false,
 				});
 			});
+	};
+	strikeThrough = (e) => {
+		const element = e.target;
+		element.classList.toggle('crossed-line');
 	};
 
 	render() {
@@ -59,7 +65,9 @@ class App extends React.Component {
 							Reset
 						</button>
 						{attractionsListTwo.map((wantToDo, index) => (
-							<p key={index}>{wantToDo.name}</p>
+							<p onClick={this.strikeThrough} key={index}>
+								{wantToDo.name}
+							</p>
 						))}
 					</div>
 				</div>

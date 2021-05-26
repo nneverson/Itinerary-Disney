@@ -12,6 +12,7 @@
 	border: 2px solid black;
 	flex-shrink: 0;
 	cursor: pointer;
+	padding-top: 20px;
 	/* width: 1fr; */
 }
 .right {
@@ -21,8 +22,9 @@
 	/* cursor: pointer; */
 }
 .right > button {
-	float: left;
 	margin-bottom: 2px;
+	display: flex;
+	justify-content: start;
 }
 nav {
 	display: flex;
@@ -38,4 +40,7 @@ nav {
 	justify-content: space-around;
 	align-items: center;
 	list-style: none;
+}
+.crossed-line{
+	text-decoration: line-through;
 }
