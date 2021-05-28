@@ -19,7 +19,7 @@
 
 ## ScreenShots
 
-![Image of home page](https://i.imgur.com/mfKVob8.png)
+![Image of home page](https://i.imgur.com/3MAhpaM.png)
 
 ![Image of about page](https://i.imgur.com/YAiNRwl.png)
 
