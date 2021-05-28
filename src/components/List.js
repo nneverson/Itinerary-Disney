@@ -1,7 +1,8 @@
 import '../App.css';
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
-class App extends React.Component {
+class List extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -17,7 +18,6 @@ class App extends React.Component {
 				this.setState({
 					isLoaded: true,
 					attractions: json,
-					strikeThrough: false,
 				});
 			});
 	}
@@ -25,6 +25,20 @@ class App extends React.Component {
 	addActivity = (e, index) => {
 		this.state.attractionsListTwo.push(e);
 		this.state.attractions.splice(index, 1);
+		fetch(
+			`https://touringplans.com/magic-kingdom/attractions/${e.name
+				.toLowerCase()
+				.replaceAll(' ', '-')}.json`
+		)
+			.then((res) => res.json())
+			.then((json) => {
+				e.when_to_go = json.when_to_go || 'no recommended time';
+				console.log(json);
+				this.forceUpdate();
+			})
+			.catch(() => {e.when_to_go = 'no recommended time'; this.forceUpdate()})
+		
+
 		this.forceUpdate();
 	};
 	reset = (e) => {
@@ -35,9 +49,13 @@ class App extends React.Component {
 				this.setState({
 					isLoaded: true,
 					attractions: json,
-					strikeThrough: false,
 				});
 			});
+	};
+	delete = (e, index) => {
+		this.state.attractionsListTwo.splice(index, 1);
+		this.state.attractions.unshift(e);
+		this.forceUpdate();
 	};
 	strikeThrough = (e) => {
 		const element = e.target;
@@ -46,8 +64,19 @@ class App extends React.Component {
 
 	render() {
 		const { attractions, isLoaded, attractionsListTwo } = this.state;
+		const inlineStyle = {
+			width: '100%',
+			height: '100%',
+		};
 		if (!isLoaded) {
-			return <div>Loading ...</div>;
+			return (
+				<div className='ui segment' style={inlineStyle}>
+					<p>Loading</p>
+					<div className='ui active dimmer'>
+						<div className='ui large loader'></div>
+					</div>
+				</div>
+			);
 		} else {
 			return (
 				<div className='parent'>
@@ -65,9 +94,30 @@ class App extends React.Component {
 							Reset
 						</button>
 						{attractionsListTwo.map((wantToDo, index) => (
-							<p onClick={this.strikeThrough} key={index}>
-								{wantToDo.name}
-							</p>
+							<div key={index} style={{ margin: '20px' }}>
+								<i
+									className='trash alternate outline icon'
+									onClick={(e) => this.delete(wantToDo, index)}></i>
+								<p style={{ display: 'inline' }} onClick={this.strikeThrough}>
+									{wantToDo.name}
+								</p>
+								<i
+									className={
+										'angle' +
+										' ' +
+										(wantToDo.expand ? 'up' : 'down') +
+										' ' +
+										'icon'
+									}
+									onClick={() => {
+										wantToDo.expand = !wantToDo.expand;
+										this.forceUpdate();
+									}}></i>
+
+								<p className={wantToDo.expand ? 'expand' : 'collapse'}>
+									{wantToDo.when_to_go}
+								</p>
+							</div>
 						))}
 					</div>
 				</div>
@@ -76,4 +126,4 @@ class App extends React.Component {
 	}
 }
 
-export default App;
+export default withRouter(List);

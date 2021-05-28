@@ -41,6 +41,19 @@ nav {
 	align-items: center;
 	list-style: none;
 }
-.crossed-line{
+.crossed-line {
 	text-decoration: line-through;
+}
+.collapse {
+	height: 0px;
+	max-height: 0px;
+	transition: all 200ms;
+	overflow: hidden;
+}
+.expand {
+	height: auto;
+	max-height: auto;
+	transition: all 200ms;
+	overflow: visible;
+
 }
