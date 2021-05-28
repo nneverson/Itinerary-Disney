@@ -38,6 +38,14 @@
 
 - I assumed results of specific functionality without testing it myself. This caused me to waste time with guessing. 
 
+## Stretch Goals
+- Create back end and save list to individual users
+- Allow users to grant permission to others to edit their list
+- Add icons in the directions in the about page.
+- Add carousel to homepage
+- Add a description of each ride
+
+
 ## Contribution 
 These are the tutorials I used to add the following functionalities to my app.
 
