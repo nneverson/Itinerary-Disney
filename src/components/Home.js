@@ -10,7 +10,7 @@ const Home = () => {
 				src='/1180-x-600-092916_wdw-45th-45-photos-gallery-780x440.jpg'
 				alt=''
 			/>
-			<h1>Plan your dreams so they can come through</h1>
+			<h1>Plan your dreams so they can come true</h1>
 			<Link to='/Login'>
 				{' '}
 				<button class='ui button'>Login</button>

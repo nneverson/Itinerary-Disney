@@ -3,9 +3,9 @@
 ## Installation Instructions
 
 - Fork Repository
-- Clone Repository by copying link on the repo that say clone
-- Type git clone and paste link
-- CD into that file
+- Clone Repository by copying link on the repo
+- Type 'git clone' in terminal and paste link
+- cd into that file
 - use 'npm i' to install dependencies
 - Open file in code editor.
 
@@ -45,6 +45,7 @@
 - Add icons in the directions in the about page.
 - Add carousel to homepage
 - Add a description of each ride
+- Add media query
 
 
 ## Contribution 

@@ -5,7 +5,7 @@ import FormSuccess from './FormSucess';
 
 function LoginForm({ Login, error }) {
 	const [details, setDetails] = useState({
-		name: '',
+		UserName: '',
 		email: '',
 		password: '',
 	});
@@ -13,7 +13,11 @@ function LoginForm({ Login, error }) {
 	const { isLogin } = useSelector((s) => s);
 	const submitHandler = (e) => {
 		e.preventDefault();
-		if (details.name === 'admin'&& details.email === 'admin@admin.com' && details.password === '123') {
+		if (
+			details.UserName === 'admin' &&
+			details.email === 'admin@admin.com' &&
+			details.password === '123'
+		) {
 			dispatch(login());
 		}
 	};
@@ -37,7 +41,7 @@ function LoginForm({ Login, error }) {
 						type='text'
 						name='name'
 						id='name'
-						onChange={(e) => setDetails({ ...details, name: e.target.value })}
+						onChange={(e) => setDetails({ ...details, UserName: e.target.value })}
 						value={details.name}
 					/>
 				</div>
