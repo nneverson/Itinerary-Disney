@@ -25,8 +25,6 @@
 ![Image of list](https://i.imgur.com/xv2NokT.png)
 
 
-
-
 ## Technology Used
 - React
 - JSX
