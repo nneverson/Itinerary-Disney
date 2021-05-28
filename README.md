@@ -41,6 +41,7 @@
 - I assumed results of specific functionality without testing it myself. This caused me to waste time with guessing. 
 
 ## Contribution 
+These are the tutorials I used to add the following functionalities to my app.
 
 - [Protected Route Tutorial](https://youtu.be/Y0-qdp-XBJg) 
 
