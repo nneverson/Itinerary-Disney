@@ -13,7 +13,8 @@ const Home = () => {
 			<h1>Plan your dreams so they can come through</h1>
 			<Link to='/Login'>
 				{' '}
-				<button> Login</button>
+				<button class='ui button'>Login</button>
+
 			</Link>
 		</div>
 	);
