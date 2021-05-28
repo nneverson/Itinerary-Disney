@@ -54,3 +54,9 @@ These are the tutorials I used to add the following functionalities to my app.
 - [Protected Route Tutorial](https://youtu.be/Y0-qdp-XBJg) 
 
 - [Redux login/ logout Tutorial](https://youtu.be/mMzhWXr9ass)
+
+- Api's used
+
+- [](http://touringplans.com/magic-kingdom/attractions.json)
+
+- [](http://touringplans.com/magic-kingdom/attractions/haunted-mansion.json)
