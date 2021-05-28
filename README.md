@@ -6,6 +6,7 @@
 - Clone Repository by copying link on the repo that say clone
 - Type git clone and paste link
 - CD into that file
+- use 'npm i' to install dependencies
 - Open file in code editor.
 
 ## User Story
