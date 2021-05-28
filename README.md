@@ -20,9 +20,10 @@
 
 ![Image of home page](https://i.imgur.com/mfKVob8.png)
 
+![Image of about page](https://i.imgur.com/YAiNRwl.png)
+
 ![Image of list](https://i.imgur.com/xv2NokT.png)
 
-![Image of about page](https://i.imgur.com/mfKVob8.png)
 
 
 
