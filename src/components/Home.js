@@ -1,9 +1,21 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import '.././App.css';
 
-export default function Home() {
+const Home = () => {
 	return (
-		<div>
-			<h1>Plan a fun day at disney</h1>
+		<div className='homepage'>
+			<img
+				src='/1180-x-600-092916_wdw-45th-45-photos-gallery-780x440.jpg'
+				alt=''
+			/>
+			<h1>Plan your dreams so they can come through</h1>
+			<Link to='/Login'>
+				{' '}
+				<button> Login</button>
+			</Link>
 		</div>
 	);
-}
+};
+
+export default Home;

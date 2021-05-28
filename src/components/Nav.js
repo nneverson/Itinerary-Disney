@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import '../App.css';
 import {useSelector, useDispatch} from 'react-redux'
 import {logout} from '../redux/actions'
+
+
 export default function Nav() {
     const navStyle={
         color: 'white',
